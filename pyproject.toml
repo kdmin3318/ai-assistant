@@ -1,0 +1,27 @@
+[project]
+name = "ai-assistant"
+version = "0.1.0"
+description = "AI Calendar Assistant Agent - 대화에서 일정을 추출하여 Google Calendar에 반영"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp[cli]",
+    "litellm",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "google-api-python-client",
+    "pydantic>=2.0",
+    "pydantic-settings",
+    "rich",
+    "httpx",
+    "python-dotenv",
+]
+
+[project.scripts]
+ai-assistant = "cli.main:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
